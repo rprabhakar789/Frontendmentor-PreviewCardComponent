@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Outfit:300,400,600,700&amp;lang=en" />
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+  <style>
+	
+	@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+	body{
+		margin:0;
+		font-family: 'Outfit';
+		font-weight: 600;
+		color:white;
+	}
+	.page{
+		width:100vw;
+		height:100vh;
+		background-color:hsl(217, 54%, 11%);
+		
+	}
+	
+	.card{
+		height:540px;
+		width: 280px;
+		border-radius:20px;
+		background-color:hsl(216, 50%, 16%);
+		position: absolute;
+	  left: 50%;
+	  top: 50%;
+	  -webkit-transform: translate(-50%, -50%);
+	  transform: translate(-50%, -50%);
+	}
+	
+	.content{
+		margin-left:20px;
+		margin-top:20px;
+		margin-right:20px;
+	}
+	.image{
+		height:240px;
+		width:240px;
+		border-radius:10px;
+	}
+	.image-on-hover {
+		width: 240px;
+		height: 240px;
+		position:absolute;
+		top:20px;
+		justify-content: center;
+		align-items: center;
+		background-color: hsla(178, 100%, 50%, .7);
+		border-radius: 10px;
+		opacity: 0;
+		transition: 0.4s ease-out;
+	}
+	.image-on-hover:hover{
+		opacity:1;
+		cursor:pointer;
+	}
+	.view-image{
+		display:flex;
+	  left: 50%;
+	  top: 50%;
+	  position:relative;
+	  -webkit-transform: translate(-50%, -50%);
+	  transform: translate(-50%, -50%);
+	}
+	.change-on-hover{
+		transition: 0.4s ease-out;
+	}
+	.change-on-hover:hover{
+		color:hsl(178, 100%, 50%);
+		cursor:pointer;
+	}
+	.header{
+		margin-top:40px;
+		color:hsl(0, 0%, 100%);
+		font-weight:600;
+	}
+	.section{
+		margin-top:20px;
+		font-size:14px;
+		color:hsl(215, 51%, 70%);
+		font-weight:300;
+	}
+	.section2{
+		margin:auto;
+		display:flex;
+		margin-top:20px;
+		font-size:14px;
+		font-weight:300;
+		color: hsl(178, 100%, 50%);
+	}
+	.border{
+		margin-top:20px;
+		border-bottom: 2px solid hsl(215, 51%, 70%);
+	}
+	.avatar{
+		width:40px;
+		height:40px;
+		border:2px solid white;
+		border-radius:50%;
+	}
+	.footer{
+		margin-top:20px;
+		display:flex;
+		font-size:12px;
+		font-weight:300;
+	}
+	.price{
+		display:flex;
+	}
+	.time{
+		margin-left:auto;
+		display:flex;
+	}	
+  </style>
+</head>
+<body>
+
+<div class="page">
+	<div class="card">
+		<div class="content">
+			<img class="image" src="./images/image-equilibrium.jpg"/>
+			<div class="image-on-hover">
+			<img class="view-image" src="./images/icon-view.svg"/>
+			</div>
+			<h2 class="header change-on-hover">
+				Equilibrium #3429
+			</h2>
+			<div class="section">
+				Our Equilibrium collection promotes balance and calm.
+			</div>
+			<div class="section2">
+				<div class="price">
+				<img src="./images/icon-ethereum.svg"/>
+				<span style="margin-left:10px">0.041 ETH</span>
+				</div>
+				<div class="time">
+				<img src="./images/icon-clock.svg"/>
+				<span style="margin-left:10px;color:white">3 days left</span>
+				</div>
+			</div>
+			<div class="border"></div>
+			<div class="footer">
+				<img class="avatar" src="./images/image-avatar.png"/>
+				<p style="color:hsl(215, 51%, 70%);margin-left:10px">Creation of </p><p class="change-on-hover">&nbsp;Jules Wyvern</p>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
